@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio TTM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            background-color: blue;
+            color:  #F3EFEC;
+        }
+
+        .horizontal1L {
+            grid-area: horizontal1L;
+        }
+        .horizontal1R {
+            grid-area: horizontal1R;
+        }
+        .horizontal2L {
+            grid-area: horizontal2L;
+        }
+        .horizontal2R {
+            grid-area: horizontal2R;
+        }
+        .horizontal3L {
+            grid-area: horizontal3L;
+        }
+
+        .verticalC {
+            grid-area: verticalC;
+        }
+        .vertical1L {
+            grid-area: vertical1L;
+        }
+        .vertical2L {
+            grid-area: vertical2L;
+        }
+        .vertical1R {
+            grid-area: vertical1R;
+        }
+        .vertical2R {
+            grid-area: vertical2R;
+        }
+
+        .iniciales {
+            grid-area: iniciales;
+        }
+
+        html, body {
+            font-family: 'Source Code Pro';
+            height: 100%;
+            margin: 0;
+        }
+
+        div {
+            border-style: solid;
+            border-width: 0px;
+            border-color: black;
+        }
+
+        .divalineado {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 800;
+        }
+
+        .gridgeneral {
+            display: grid;
+            grid-template-columns: 50px 1fr 50px 30% 50px;
+            grid-template-rows: 50px 1fr 50px;
+            height: 100%;
+            width: 100%;
+            grid-template-areas:
+                "iniciales horizontal1L . horizontal1R ."
+                "vertical1L gridportfolio verticalC gridpracticas vertical2R"
+                ". horizontal2L . horizontal2R .";
+        }
+
+        .gridportfolio {
+            display: grid;
+            grid-template-columns: repeat(3,1fr) 6fr;
+            grid-template-rows: repeat(8,1fr);
+            font-weight: 800;
+            font-size: 2em;
+            grid-area: gridportfolio;
+
+            /* IMAGEN DE FONDO */
+            background-image: url("https://tomtormul-cloud.github.io/imagenes/fondo_portfolio.png");
+            background-size: cover;       /* llena todo */
+            background-position: center;  /* centrada */
+            background-repeat: no-repeat;
+        }
+
+        .gridpracticas {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(5,1fr);
+            grid-area: gridpracticas;
+        }
+
+        .blanco {
+            background-color: #F3EFEC;
+        }
+
+        button {
+            font-family: 'Source Code Pro';
+            font-weight: lighter;
+            border-style: none;
+            font-size: 1.2em;
+        }
+
+        button:hover {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        @media (orientation: portrait) {
+            * {
+                background-color: blue;
+            }
+
+            .verticalC, .horizontal1R, .horizontal2R {
+                display: none;
+            }
+
+            .gridgeneral {
+            display: grid;
+            grid-template-rows: 50px 1fr 50px 30% 50px;
+            grid-template-columns: 50px 1fr 50px;
+            height: 100%;
+            width: 100%;
+            grid-template-areas:
+                "iniciales horizontal1L ."
+                "vertical1L gridportfolio vertical1R"
+                ". horizontal2L ."
+                "vertical2L gridpracticas vertical2R"
+                ". horizontal3L .";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gridgeneral">
+        <div class="blanco horizontal1L"></div>
+        <div class="blanco horizontal2L"></div>
+        <div class="blanco horizontal3L"></div>
+        <div class="blanco horizontal1R"></div>
+        <div class="blanco horizontal2R"></div>
+        <div class="blanco verticalC"></div>
+        <div class="blanco vertical1L"></div>
+        <div class="blanco vertical2L"></div>
+        <div class="blanco vertical1R"></div>
+        <div class="blanco vertical2R"></div>
+        <div class="gridportfolio">
+            <div class="divalineado">P</div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="divalineado">O</div>
+            <div></div>
+            <div class="divalineado">L</div>
+            <div></div>
+            <div class="divalineado">R</div>
+            <div class="divalineado">T</div>
+            <div class="divalineado">I</div>
+            <div></div>
+            <div></div>
+            <div class="divalineado">F</div>
+            <div class="divalineado">O</div>
+            <div></div>
+            <div></div>
+            <div class="divalineado">O</div>
+        </div>
+        <div class="gridpracticas">
+            <div></div>
+            <button onclick="window.open('https://tomtormul-cloud.github.io/p1/', '_blank')">P1</button>
+            <button onclick="window.open('https://tomtormul-cloud.github.io/p2/', '_blank')">P2</button>
+            <button onclick="window.open('https://tomtormul-cloud.github.io/p3/', '_blank')">P3</button>
+            <button onclick="window.open('https://tomtormul-cloud.github.io/p4/', '_blank')">P4</button>
+            <div></div>
+            <div></div>
+            <div></div>
+            <button onclick="window.open('https://tomtormul-cloud.github.io/p5/', '_blank')">P5</button>
+            <button onclick="window.open('https://tomtormul-cloud.github.io/p6/', '_blank')">P6</button>
+            <button onclick="window.open('https://tomtormul-cloud.github.io/p7/', '_blank')">P7</button>
+            <button onclick="window.open('https://tomtormul-cloud.github.io/p8/', '_blank')">P8</button>
+            <button onclick="window.open('https://tomtormul-cloud.github.io/p9/', '_blank')">P9</button>
+        </div>
+        <div class="divalineado iniciales">TTM</div>
+    </div>
+</body>
+</html>
